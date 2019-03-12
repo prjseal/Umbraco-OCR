@@ -14,8 +14,13 @@
         }
 
         $scope.imageChanged = function () {
+
+            var file = document.getElementById("image").files[0];
+            var dataUri = URL.createObjectURL(file);
+
+            alert(dataUri);
+
             $http.get(apiUrl + 'GetTextFromImageAsync').then(function (response) {
-                alert(response.data);
                 var textData = JSON.parse(response.data);
                 var text = '';
                 for (var r = 0; r < textData["regions"].length; r++) {

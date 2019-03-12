@@ -5,7 +5,8 @@
         </div>
     </div>
     <div id="umbraco-ocr" class="umbraco-ocr__container">
-        <textarea rows="20" ng-model="textFromImage" style="width: 50%;"></textarea>
+        <textarea rows="20" ng-model="textFromImage" style="width: 100%; display: block"></textarea>
+        <input type="file" id="image"/>
         <button type="button" ng-click="imageChanged()" class="btn umb-button__button btn-success umb-button--">Submit</button>
     </div>
 </div>
