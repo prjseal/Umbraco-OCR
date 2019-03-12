@@ -1,0 +1,21 @@
+﻿{
+  "contentApps": [
+    {
+      "name": "OCR",
+      "alias": "umbracoOcr",
+      "weight": 1,
+      "icon": "icon-glasses",
+      "view": "~/App_Plugins/UmbracoOCR/index.html",
+      "show": [
+        "+content/*",
+        "+media/*"
+      ]
+    }
+  ],
+    "javascript": [
+        "~/App_Plugins/UmbracoOCR/js/umbracoocr.controller.js"
+    ],
+    "css": [
+        "~/App_Plugins/UmbracoOCR/css/umbracoocr.css"
+    ]
+}

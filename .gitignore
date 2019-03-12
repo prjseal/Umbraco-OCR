@@ -3,3 +3,15 @@
 ################################################################################
 
 /src/.vs
+/src/packages
+/src/UmbracoOCR/bin/Debug
+/src/UmbracoOCR/obj/Debug
+/src/UmbracoOCR.Web/App_Data/cache/e/a/e/b/b/5
+/src/UmbracoOCR.Web/App_Data/Logs
+/src/UmbracoOCR.Web/App_Data/Models
+/src/UmbracoOCR.Web/App_Data/NuGetBackup/20190310-231522
+/src/UmbracoOCR.Web/App_Data/TEMP
+/src/UmbracoOCR.Web/App_Plugins/UmbracoOCR
+/src/UmbracoOCR.Web/bin
+/src/UmbracoOCR.Web/obj/Debug
+/src/UmbracoOCR.Web/Umbraco

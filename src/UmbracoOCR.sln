@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoOCR.Web", "UmbracoOCR.Web\UmbracoOCR.Web.csproj", "{7C38443B-BAD4-4DCC-B084-7A91D11E8434}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoOCR", "UmbracoOCR\UmbracoOCR.csproj", "{16090C02-A0FE-4E96-9BD3-9E5CA858783D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C38443B-BAD4-4DCC-B084-7A91D11E8434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C38443B-BAD4-4DCC-B084-7A91D11E8434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C38443B-BAD4-4DCC-B084-7A91D11E8434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C38443B-BAD4-4DCC-B084-7A91D11E8434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16090C02-A0FE-4E96-9BD3-9E5CA858783D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16090C02-A0FE-4E96-9BD3-9E5CA858783D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16090C02-A0FE-4E96-9BD3-9E5CA858783D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16090C02-A0FE-4E96-9BD3-9E5CA858783D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0D613DF-512C-4411-BD6F-573D0F306387}
+	EndGlobalSection
+EndGlobal
