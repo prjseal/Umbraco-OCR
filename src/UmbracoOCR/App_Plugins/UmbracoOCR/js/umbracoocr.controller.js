@@ -15,12 +15,23 @@
 
         $scope.imageChanged = function () {
 
+            var preview = document.querySelector('#umbraco-ocr img');
             var file = document.getElementById("image").files[0];
-            var dataUri = URL.createObjectURL(file);
+            var imageDataUri = URL.createObjectURL(file);
 
-            alert(dataUri);
+            var reader = new FileReader();
 
-            $http.get(apiUrl + 'GetTextFromImageAsync').then(function (response) {
+            reader.addEventListener("load", function () {
+                preview.src = reader.result;
+            }, false);
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+
+            alert(reader.result);
+
+            $http.get(apiUrl + 'GetTextFromImageAsync/?imageUri=' + imageDataUri).then(function (response) {
                 var textData = JSON.parse(response.data);
                 var text = '';
                 for (var r = 0; r < textData["regions"].length; r++) {

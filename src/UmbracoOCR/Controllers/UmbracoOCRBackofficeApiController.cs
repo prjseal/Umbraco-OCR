@@ -13,7 +13,7 @@ namespace UmbracoOCR.Controllers
     [PluginController("UmbracoOCR")]
     public class UmbracoOCRBackofficeApiController : UmbracoAuthorizedJsonController
     {
-        public Task<string> GetTextFromImageAsync()
+        public Task<string> GetTextFromImageAsync(string imageUri)
         {
             string imageFilePath = @"D:\GitHub\Umbraco-OCR\src\UmbracoOCR.Web\img\umbraco-home-text.png"; 
             string subscriptionKey = ConfigurationManager.AppSettings["SubscriptionKey"];

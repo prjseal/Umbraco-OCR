@@ -56,7 +56,7 @@ namespace UmbracoOCR.Composers
                     {
                         "UmbracoOCRApiUrl",
                         urlHelper.GetUmbracoApiServiceBaseUrl<UmbracoOCRBackofficeApiController>(
-                            controller => controller.GetTextFromImageAsync())
+                            controller => controller.GetTextFromImageAsync("imageUri"))
                     }
                 });
         }

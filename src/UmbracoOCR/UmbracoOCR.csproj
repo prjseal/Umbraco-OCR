@@ -235,6 +235,7 @@
   <ItemGroup>
     <Compile Include="Composers\UmbracoOCRComposer.cs" />
     <Compile Include="Controllers\UmbracoOCRBackofficeApiController.cs" />
+    <Compile Include="Helpers\AsyncHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
