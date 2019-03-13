@@ -10,28 +10,36 @@
             apiUrl = Umbraco.Sys.ServerVariables["UmbracoOCR"]["UmbracoOCRApiUrl"];
 
             $scope.textFromImage = '';
-
+            $scope.imageUri = '';
         }
 
         $scope.imageChanged = function () {
 
             var preview = document.querySelector('#umbraco-ocr img');
             var file = document.getElementById("image").files[0];
-            var imageDataUri = URL.createObjectURL(file);
 
             var reader = new FileReader();
 
             reader.addEventListener("load", function () {
-                preview.src = reader.result;
+                $scope.imageUri = reader.result;
+                preview.src = $scope.imageUri;
+                $scope.getTextFromImage();
             }, false);
 
             if (file) {
                 reader.readAsDataURL(file);
             }
+        }
 
-            alert(reader.result);
-
-            $http.get(apiUrl + 'GetTextFromImageAsync/?imageUri=' + imageDataUri).then(function (response) {
+        $scope.getTextFromImage = function () {
+            $http({
+                method: 'POST',
+                url: apiUrl + 'GetTextFromImage/',
+                data: JSON.stringify({ ImageUri: preview.src }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(function (response) {
                 var textData = JSON.parse(response.data);
                 var text = '';
                 for (var r = 0; r < textData["regions"].length; r++) {
@@ -44,7 +52,7 @@
                         }
                         text += '\n';
                     }
-                    text += '\n';
+                    text += '\n\n';
                 }
                 $scope.textFromImage = text.trim();
             });
