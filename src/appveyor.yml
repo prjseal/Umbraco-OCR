@@ -1,0 +1,7 @@
+version: 1.0.{build}
+before_build:
+  ps: nuget restore src/UmbracoOCR.Web.sln
+build:
+  project: src/UmbracoOCR/UmbracoOCR.csproj
+  publish_nuget: true
+  verbosity: detailed
