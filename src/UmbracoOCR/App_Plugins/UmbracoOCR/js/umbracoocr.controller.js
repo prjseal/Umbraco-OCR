@@ -57,9 +57,7 @@
                     text += '\n\n';
                 }
                 $scope.textFromImage = text.trim();
-                }).error(function() {
-                    $scope.textFromImage = 'There was an error when trying to get the text from the image.';
-                });
+            });
         }
 
         init();

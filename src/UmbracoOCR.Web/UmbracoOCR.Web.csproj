@@ -441,9 +441,7 @@
       <Name>UmbracoOCR</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="img\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -481,8 +479,7 @@
   </Target>
   <Import Project="..\packages\UmbracoCms.8.0.0\build\UmbracoCms.targets" Condition="Exists('..\packages\UmbracoCms.8.0.0\build\UmbracoCms.targets')" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y /S /D "$(SolutionDir)\UmbracoOCR\App_Plugins\*" "$(ProjectDir)\App_Plugins"
-xcopy /Y /S /D "$(SolutionDir)\UmbracoOCR\img\*" "$(ProjectDir)\img"</PostBuildEvent>
+    <PostBuildEvent>xcopy /Y /S /D "$(SolutionDir)\UmbracoOCR\App_Plugins\*" "$(ProjectDir)\App_Plugins"</PostBuildEvent>
   </PropertyGroup>
   <Import Project="..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets" Condition="Exists('..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

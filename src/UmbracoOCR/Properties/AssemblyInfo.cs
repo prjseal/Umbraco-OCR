@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("UmbracoOCR")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Umbraco OCR")]
+[assembly: AssemblyDescription("A Content App for Umbraco which")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("UmbracoOCR")]
+[assembly: AssemblyCompany("Paul Seal")]
+[assembly: AssemblyProduct("Umbraco OCR")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Paul Seal")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible

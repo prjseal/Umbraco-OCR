@@ -242,12 +242,12 @@
     <None Include="app.config" />
     <None Include="App_Plugins\UmbracoOCR\package.manifest" />
     <None Include="packages.config" />
+    <None Include="UmbracoOCR.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Plugins\UmbracoOCR\css\umbracoocr.css" />
     <Content Include="App_Plugins\UmbracoOCR\index.html" />
     <Content Include="App_Plugins\UmbracoOCR\js\umbracoocr.controller.js" />
-    <Content Include="img\umbraco-home-text.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

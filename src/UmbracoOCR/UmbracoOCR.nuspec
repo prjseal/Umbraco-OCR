@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Paul Seal</authors>
+    <owners>Paul Seal</owners>
+    <licenseUrl>https://github.com/prjseal/UmbracoOCR/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/prjseal/UmbracoOCR</projectUrl>
+    <iconUrl>https://github.com/prjseal/UmbracoOCR/blob/master/images/logo.png?raw=true</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>
+      - content app gives you OCR tab to read text from an image
+    </releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>Umbraco OCR Optical Character Recognition Azure Cognitive Services Vision v8 package library</tags>
+  </metadata>
+  <files>
+    <file src="App_Plugins\UmbracoOCR\**\*.*" target="content\App_Plugins\UmbracoOCR" />
+  </files>  
+</package>

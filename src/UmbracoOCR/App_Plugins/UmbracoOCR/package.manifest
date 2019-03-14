@@ -7,8 +7,7 @@
       "icon": "icon-glasses",
       "view": "~/App_Plugins/UmbracoOCR/index.html",
       "show": [
-        "+content/*",
-        "+media/*"
+        "+content/*"
       ]
     }
   ],
