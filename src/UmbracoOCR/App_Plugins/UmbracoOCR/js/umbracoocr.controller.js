@@ -14,6 +14,7 @@
         }
 
         $scope.imageChanged = function () {
+            $scope.textFromImage = 'Please wait...';
 
             var preview = document.querySelector('#umbraco-ocr img');
             var file = document.getElementById("image").files[0];
@@ -23,6 +24,7 @@
             reader.addEventListener("load", function () {
                 $scope.imageUri = reader.result;
                 preview.src = $scope.imageUri;
+                preview.style.display = "block";
                 $scope.getTextFromImage();
             }, false);
 
@@ -55,7 +57,9 @@
                     text += '\n\n';
                 }
                 $scope.textFromImage = text.trim();
-            });
+                }).error(function() {
+                    $scope.textFromImage = 'There was an error when trying to get the text from the image.';
+                });
         }
 
         init();

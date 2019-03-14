@@ -5,9 +5,9 @@
         </div>
     </div>
     <div id="umbraco-ocr" class="umbraco-ocr__container">
-        <p>Pick an image from your computer and the text from the image will appear in the textarea below.</p>
-        <img src="http://placehold.it/600x300?text=No%20Image%20Selected" id="preview" style="height: 200px; width: auto;"/>
-        <label for="image">Choose file <input type="file" id="image" onchange="angular.element(this).scope().imageChanged()" /></label>
+        <p>Choose an image from your computer and the text from the image will appear in the textarea below.</p>
+        <label for="image">Choose file <input type="file" accept=".jpg,.png,.jpeg,.bmp" id="image" onchange="angular.element(this).scope().imageChanged()" /></label>
+        <img src="http://placehold.it/600x300?text=No%20Image%20Selected" id="preview" style="height: 200px; width: auto; display: none;"/>
         <h4>Results</h4>
         <textarea rows="20" ng-model="textFromImage" style="width: 100%; display: block; padding: 10px;"></textarea>
     </div>
