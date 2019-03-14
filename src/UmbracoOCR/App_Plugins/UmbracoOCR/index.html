@@ -6,7 +6,7 @@
     </div>
     <div id="umbraco-ocr" class="umbraco-ocr__container">
         <p>Choose an image from your computer and the text from the image will appear in the textarea below.</p>
-        <label for="image">Choose file <input type="file" accept=".jpg,.png,.jpeg,.bmp" id="image" onchange="angular.element(this).scope().imageChanged()" /></label>
+        <label for="image">Choose image <input type="file" accept=".jpg,.png,.jpeg,.bmp" id="image" onchange="angular.element(this).scope().imageChanged()" /></label>
         <img src="http://placehold.it/600x300?text=No%20Image%20Selected" id="preview"/>
         <h4>Results</h4>
         <textarea rows="20" ng-model="textFromImage"></textarea>
