@@ -44,22 +44,26 @@
             }).then(function (response) {
                 var textData = JSON.parse(response.data);
                 var text = '';
-                if (textData != '' && textData != undefined && textData.length != undefined) {
-                    for (var r = 0; r < textData["regions"].length; r++) {
-                        var region = textData["regions"][r];
-                        for (var l = 0; l < region["lines"].length; l++) {
-                            var line = region["lines"][l];
-                            for (var w = 0; w < line["words"].length; w++) {
-                                var word = line["words"][w];
-                                text += word["text"] + ' ';
+                if (!textData.error) {
+                    if (textData != '') {
+                        for (var r = 0; r < textData["regions"].length; r++) {
+                            var region = textData["regions"][r];
+                            for (var l = 0; l < region["lines"].length; l++) {
+                                var line = region["lines"][l];
+                                for (var w = 0; w < line["words"].length; w++) {
+                                    var word = line["words"][w];
+                                    text += word["text"] + ' ';
+                                }
+                                text = text.trim();
+                                text += '\n';
                             }
-                            text += '\n';
+                            text += '\n\n';
                         }
-                        text += '\n\n';
                     }
                 } else {
+                    console.log(textData.error.message);
                     text =
-                        'There was an error. ' +
+                        'There was an error. Check the console. ' +
                         '\n' +
                         '\nPlease make sure you have a valid subscription key for the Azure Vision API in the app settings of the web.config file.' +
                         '\nAlso check that the ocr api endpoint is correct' +
@@ -71,7 +75,6 @@
                         '\n' +
                         '\nTo find out how to get a subscription key, visit this page:' +
                         '\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/vision-api-how-to-topics/howtosubscribe';
-
                 }
                 $scope.textFromImage = text.trim();
             });
