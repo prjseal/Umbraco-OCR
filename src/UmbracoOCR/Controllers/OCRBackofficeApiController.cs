@@ -15,8 +15,8 @@ namespace UmbracoOCR.Controllers
         [System.Web.Http.HttpPost]
         public Task<string> GetTextFromImage(UmbracoOCRInstruction umbracoOCRInstruction)
         {
-            string subscriptionKey = ConfigurationManager.AppSettings["SubscriptionKey"];
-            string uriBase = ConfigurationManager.AppSettings["ApiUrl"];
+            string subscriptionKey = ConfigurationManager.AppSettings["OcrSubscriptionKey"];
+            string uriBase = ConfigurationManager.AppSettings["OcrApiUrl"];
             return MakeAnalysisRequest(umbracoOCRInstruction.ImageUri, subscriptionKey, uriBase);
         }
 

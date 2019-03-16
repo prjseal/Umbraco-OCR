@@ -68,8 +68,8 @@
                         '\n' +
                         '\nYou need the following app settings in your web.config file:' +
                         '\n' +
-                        '\n<add key="SubscriptionKey" value="azure-subscription-key-here" />' +
-                        '\n<add key="ApiUrl" value="https://westeurope.api.cognitive.microsoft.com/vision/v2.0/ocr" />' +
+                        '\n<add key="OcrSubscriptionKey" value="azure-subscription-key-here" />' +
+                        '\n<add key="OcrApiUrl" value="https://westeurope.api.cognitive.microsoft.com/vision/v2.0/ocr" />' +
                         '\n' +
                         '\nTo find out how to get a subscription key, visit this page:' +
                         '\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/vision-api-how-to-topics/howtosubscribe';

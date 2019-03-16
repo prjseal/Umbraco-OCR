@@ -16,21 +16,17 @@ namespace UmbracoOCR.Composers
     {
         public void Compose(Composition composition)
         {
-            // Append our component to the collection of Components
-            // It will be the last one to be run
             composition.Components().Append<OcrComponent>();
         }
     }
 
     public class OcrComponent : IComponent
     {
-        // initialize: runs once when Umbraco starts
         public void Initialize()
         {
             ServerVariablesParser.Parsing += ServerVariablesParser_Parsing;
         }
 
-        // terminate: runs once when Umbraco stops
         public void Terminate()
         {
         }
@@ -42,7 +38,6 @@ namespace UmbracoOCR.Composers
                 throw new InvalidOperationException("HttpContext is null");
             }
 
-            //Create a .NET MVC URL Helper
             var urlHelper =
                 new UrlHelper(
                     new RequestContext(

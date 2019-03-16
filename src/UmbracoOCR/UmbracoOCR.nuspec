@@ -15,7 +15,7 @@
       - content app gives you OCR tab to read text from an image
     </releaseNotes>
     <copyright>$copyright$</copyright>
-    <tags>Umbraco OCR Optical Character Recognition Azure Cognitive Services Vision v8 package library</tags>
+    <tags>Umbraco Content App OCR Optical Character Recognition Azure Cognitive Services Vision v8 package library</tags>
   </metadata>
   <files>
     <file src="App_Plugins\UmbracoOCR\**\*.*" target="content\App_Plugins\UmbracoOCR" />
