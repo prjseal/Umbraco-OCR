@@ -1,8 +1,8 @@
-﻿#umbraco-ocr {
+﻿#ocr-content-app {
     padding: 20px;
 }
 
-#umbraco-ocr #image {
+#ocr-content-app #image {
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
@@ -11,7 +11,7 @@
     z-index: -1;
 }
 
-#umbraco-ocr label[for="image"] {
+#ocr-content-app label[for="image"] {
     padding: 10px;
     background-color: #1b264f;
     color: #f2f2f2;
@@ -19,13 +19,13 @@
     margin-bottom: 10px;
 }
 
-#umbraco-ocr #preview {
+#ocr-content-app #preview {
     height: 200px; 
     width: auto; 
     display: none;
 }
 
-#umbraco-ocr textarea {
+#ocr-content-app textarea {
     width: 100%; 
     display: block; 
     padding: 10px;

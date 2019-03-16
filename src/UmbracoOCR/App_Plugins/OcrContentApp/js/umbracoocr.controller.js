@@ -14,7 +14,7 @@
         $scope.imageChanged = function () {
             $scope.textFromImage = 'Please wait...';
 
-            var preview = document.querySelector('#umbraco-ocr img');
+            var preview = document.querySelector('#ocr-content-app img');
             var file = document.getElementById("image").files[0];
 
             var reader = new FileReader();
