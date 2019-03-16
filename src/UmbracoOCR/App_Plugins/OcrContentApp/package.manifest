@@ -12,9 +12,9 @@
     }
   ],
     "javascript": [
-        "~/App_Plugins/OcrContentApp/js/umbracoocr.controller.js"
+        "~/App_Plugins/OcrContentApp/js/main.controller.js"
     ],
     "css": [
-        "~/App_Plugins/OcrContentApp/css/umbracoocr.css"
+        "~/App_Plugins/OcrContentApp/css/style.css"
     ]
 }

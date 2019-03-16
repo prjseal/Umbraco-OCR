@@ -245,9 +245,9 @@
     <None Include="UmbracoOCR.nuspec" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Plugins\OcrContentApp\css\umbracoocr.css" />
+    <Content Include="App_Plugins\OcrContentApp\css\style.css" />
     <Content Include="App_Plugins\OcrContentApp\index.html" />
-    <Content Include="App_Plugins\OcrContentApp\js\umbracoocr.controller.js" />
+    <Content Include="App_Plugins\OcrContentApp\js\main.controller.js" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
