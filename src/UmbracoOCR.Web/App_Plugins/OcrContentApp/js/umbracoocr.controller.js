@@ -1,13 +1,11 @@
 ﻿(function () {
     'use strict';
 
-    function UmbracoOCR($scope, $http, editorState, navigationService) {
-
-        var vm = this;
+    function OcrContentApp($scope, $http) {
         var apiUrl;
 
         function init() {
-            apiUrl = Umbraco.Sys.ServerVariables["UmbracoOCR"]["UmbracoOCRApiUrl"];
+            apiUrl = Umbraco.Sys.ServerVariables["OCR"]["OcrApiUrl"];
 
             $scope.textFromImage = '';
             $scope.imageUri = '';
@@ -79,11 +77,9 @@
                 $scope.textFromImage = text.trim();
             });
         }
-
         init();
-
     }
 
-    angular.module('umbraco').controller('UmbracoOCR', UmbracoOCR);
+    angular.module('umbraco').controller('OcrContentApp', OcrContentApp);
 
 })();

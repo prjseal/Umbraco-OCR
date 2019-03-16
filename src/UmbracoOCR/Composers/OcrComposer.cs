@@ -12,17 +12,17 @@ using UmbracoOCR.Controllers;
 namespace UmbracoOCR.Composers
 {
     [RuntimeLevel(MinLevel = RuntimeLevel.Run)]
-    public class MyComposer : IUserComposer
+    public class OcrComposer : IUserComposer
     {
         public void Compose(Composition composition)
         {
             // Append our component to the collection of Components
             // It will be the last one to be run
-            composition.Components().Append<MyComponent>();
+            composition.Components().Append<OcrComponent>();
         }
     }
 
-    public class MyComponent : IComponent
+    public class OcrComponent : IComponent
     {
         // initialize: runs once when Umbraco starts
         public void Initialize()
@@ -50,13 +50,13 @@ namespace UmbracoOCR.Composers
                             HttpContext.Current),
                         new RouteData()));
 
-            if (!e.ContainsKey("UmbracoOCR"))
-                e.Add("UmbracoOCR", new Dictionary<string, object>
+            if (!e.ContainsKey("OCR"))
+                e.Add("OCR", new Dictionary<string, object>
                 {
                     {
-                        "UmbracoOCRApiUrl",
-                        urlHelper.GetUmbracoApiServiceBaseUrl<UmbracoOCRBackofficeApiController>(
-                            controller => controller.GetTextFromImageAsync("imageUri"))
+                        "OcrApiUrl",
+                        urlHelper.GetUmbracoApiServiceBaseUrl<OcrBackofficeApiController>(
+                            controller => controller.GetTextFromImage(new OcrBackofficeApiController.UmbracoOCRInstruction() { ImageUri = ""}))
                     }
                 });
         }

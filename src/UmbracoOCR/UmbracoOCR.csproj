@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationManifest>App_Plugins\UmbracoOCR\package.manifest</ApplicationManifest>
+    <ApplicationManifest>App_Plugins\OcrContentApp\package.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
@@ -234,21 +234,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Composers\UmbracoOCRComposer.cs" />
-    <Compile Include="Controllers\UmbracoOCRBackofficeApiController.cs" />
-    <Compile Include="Helpers\AsyncHelper.cs" />
+    <Compile Include="Composers\OcrComposer.cs" />
+    <Compile Include="Controllers\OcrBackofficeApiController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="App_Plugins\UmbracoOCR\package.manifest" />
+    <None Include="App_Plugins\OcrContentApp\package.manifest" />
     <None Include="packages.config" />
     <None Include="UmbracoOCR.nuspec" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Plugins\UmbracoOCR\css\umbracoocr.css" />
-    <Content Include="App_Plugins\UmbracoOCR\index.html" />
-    <Content Include="App_Plugins\UmbracoOCR\js\umbracoocr.controller.js" />
+    <Content Include="App_Plugins\OcrContentApp\css\umbracoocr.css" />
+    <Content Include="App_Plugins\OcrContentApp\index.html" />
+    <Content Include="App_Plugins\OcrContentApp\js\umbracoocr.controller.js" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

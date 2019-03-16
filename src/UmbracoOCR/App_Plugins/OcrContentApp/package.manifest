@@ -1,0 +1,20 @@
+﻿{
+  "contentApps": [
+    {
+      "name": "OCR",
+      "alias": "ocrContentApp",
+      "weight": 1,
+      "icon": "icon-glasses",
+      "view": "~/App_Plugins/OcrContentApp/index.html",
+      "show": [
+        "+content/*"
+      ]
+    }
+  ],
+    "javascript": [
+        "~/App_Plugins/OcrContentApp/js/umbracoocr.controller.js"
+    ],
+    "css": [
+        "~/App_Plugins/OcrContentApp/css/umbracoocr.css"
+    ]
+}
