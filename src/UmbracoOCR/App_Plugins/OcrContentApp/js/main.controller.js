@@ -10,11 +10,11 @@
             $scope.imageUri = '';
         }
 
-        $scope.imageChanged = function () {
+        $scope.imageChanged = function ($event) {
             $scope.textFromImage = 'Please wait...';
 
             var preview = document.querySelector('#ocr-content-app img');
-            var file = document.getElementById("image").files[0];
+            var file = $event.target.files[0];
 
             var reader = new FileReader();
             reader.addEventListener("load", function () {
@@ -66,5 +66,24 @@
     }
 
     angular.module('umbraco').controller('OcrContentApp', OcrContentApp);
+
+    angular.module("umbraco").directive("ngUploadChange", function () {
+        return {
+            scope: {
+                ngUploadChange: "&"
+            },
+            link: function ($scope, $element, $attrs) {
+                $element.on("change",
+                    function(event) {
+                        $scope.$apply(function() {
+                            $scope.ngUploadChange({ $event: event });
+                        });
+                    });
+                $scope.$on("$destroy", function () {
+                    $element.off();
+                });
+            }
+        }
+    });
 
 })();
