@@ -252,7 +252,7 @@
     <Content Include="App_Plugins\OcrContentApp\css\style.css" />
     <Content Include="App_Plugins\OcrContentApp\index.html" />
     <Content Include="App_Plugins\OcrContentApp\js\main.controller.js" />
-    <Content Include="App_Plugins\OcrContentApp\readme.txt" />
+    <Content Include="App_Plugins\OcrContentApp\readme.txt" pack="true" PackagePath="." />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
