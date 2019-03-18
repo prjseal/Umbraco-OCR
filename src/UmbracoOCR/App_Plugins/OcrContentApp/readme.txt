@@ -8,6 +8,8 @@
                                                                       |_|   |_|    
 ___________________________________________________________________________________
                                               
+An OCR Content App for Umbraco which gives you an OCR tab to read text from an image.
+
 You need the following app settings in your web.config file:
                         
 <add key="OcrSubscriptionKey" value="azure-subscription-key-here" />

@@ -1,5 +1,6 @@
-# Umbraco-OCR
-An OCR Content App for Umbraco
+# OCR Content App
+
+An OCR Content App for Umbraco which gives you an OCR tab to read text from an image
 
 ![https://github.com/prjseal/Umbraco-OCR/blob/master/images/logo.jpg?raw=true](https://github.com/prjseal/Umbraco-OCR/blob/master/images/logo.jpg?raw=true)
 
