@@ -6,7 +6,6 @@
 
         function init() {
             apiUrl = Umbraco.Sys.ServerVariables["OCR"]["OcrApiUrl"];
-
             $scope.textFromImage = '';
             $scope.imageUri = '';
         }
@@ -18,7 +17,6 @@
             var file = document.getElementById("image").files[0];
 
             var reader = new FileReader();
-
             reader.addEventListener("load", function () {
                 $scope.imageUri = reader.result;
                 preview.src = $scope.imageUri;
@@ -35,7 +33,7 @@
             $http({
                 method: 'POST',
                 url: apiUrl + 'GetTextFromImage/',
-                data: JSON.stringify({ ImageUri: preview.src }),
+                data: JSON.stringify({ ImageUri: $scope.imageUri }),
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -59,20 +57,7 @@
                         }
                     }
                 } else {
-                    console.log(textData.error.message);
-                    text =
-                        'There was an error. Check the console. ' +
-                        '\n' +
-                        '\nPlease make sure you have a valid subscription key for the Azure Vision API in the app settings of the web.config file.' +
-                        '\nAlso check that the ocr api endpoint is correct' +
-                        '\n' +
-                        '\nYou need the following app settings in your web.config file:' +
-                        '\n' +
-                        '\n<add key="OcrSubscriptionKey" value="azure-subscription-key-here" />' +
-                        '\n<add key="OcrApiUrl" value="https://westeurope.api.cognitive.microsoft.com/vision/v2.0/ocr" />' +
-                        '\n' +
-                        '\nTo find out how to get a subscription key, visit this page:' +
-                        '\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/vision-api-how-to-topics/howtosubscribe';
+                    text = textData.error.message;
                 }
                 $scope.textFromImage = text.trim();
             });

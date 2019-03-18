@@ -1,15 +1,15 @@
 ﻿using Umbraco.Core;
 using Umbraco.Core.Composing;
-using UmbracoOCR.Components;
+using UmbracoOCR.Services;
 
 namespace UmbracoOCR.Composers
 {
     [RuntimeLevel(MinLevel = RuntimeLevel.Run)]
-    public class OcrComposer : IUserComposer
+    public class VisionComposer : IUserComposer
     {
         public void Compose(Composition composition)
         {
-            composition.Components().Append<OcrComponent>();
+            composition.Register<IVisionService, VisionService>();
         }
     }
 }
