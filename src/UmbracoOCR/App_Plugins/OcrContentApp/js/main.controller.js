@@ -42,13 +42,13 @@
                 var text = '';
                 if (!textData.error) {
                     if (textData != '') {
-                        for (var r = 0; r < textData["regions"].length; r++) {
-                            var region = textData["regions"][r];
-                            for (var l = 0; l < region["lines"].length; l++) {
-                                var line = region["lines"][l];
-                                for (var w = 0; w < line["words"].length; w++) {
-                                    var word = line["words"][w];
-                                    text += word["text"] + ' ';
+                        for (var r = 0; r < textData.regions.length; r++) {
+                            var region = textData.regions[r];
+                            for (var l = 0; l < region.lines.length; l++) {
+                                var line = region.lines[l];
+                                for (var w = 0; w < line.words.length; w++) {
+                                    var word = line.words[w];
+                                    text += word.text + ' ';
                                 }
                                 text = text.trim();
                                 text += '\n';
