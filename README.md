@@ -6,8 +6,8 @@ An OCR Content App for Umbraco which gives you an OCR tab to read text from an i
 
 You need the following app settings in your web.config file:
                         
-<add key="OcrSubscriptionKey" value="azure-subscription-key-here" />
-<add key="OcrApiUrl" value="https://westeurope.api.cognitive.microsoft.com/vision/v2.0/ocr" />
+add key="OcrSubscriptionKey" value="azure-subscription-key-here"
+add key="OcrApiUrl" value="https://westeurope.api.cognitive.microsoft.com/vision/v2.0/ocr"
 
 Please make sure you have a valid subscription key for the Azure Vision API in the 
 app settings of the web.config file. Also check that the ocr api endpoint is correct.
