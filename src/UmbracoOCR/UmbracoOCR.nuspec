@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>OcrContentApp</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>OCR Content App</title>
     <authors>Paul Seal</authors>
     <owners>Paul Seal</owners>
@@ -17,4 +17,7 @@
     <copyright>$copyright$</copyright>
     <tags>Umbraco Content App OCR Optical Character Recognition Azure Cognitive Services Vision v8 package library</tags>
   </metadata>
+  <files>
+    <file src="App_Plugins\OcrContentApp\**\*.*" target="content\App_Plugins\OcrContentApp" />
+  </files>
 </package>
